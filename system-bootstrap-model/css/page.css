@@ -247,6 +247,9 @@ table .table-hover tbody tr:hover {
   text-align: center;
   border-bottom: 1px solid #1d212c;
 }
+.nextmenu ul li.cur a {
+  color: #02e4a2;
+}
 .nextmenu ul li a {
   font-size: 12px;
   color: #a8aeb4;
