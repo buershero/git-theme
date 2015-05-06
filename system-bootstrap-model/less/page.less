@@ -1,0 +1,254 @@
+body, button, input, select, textarea { font:12px/1.125 Microsoft YaHei }
+sub, sup { line-height:0 }
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0 }
+li { list-style:none }
+fieldset, img { border:0 }
+input, textarea { outline-style:none }
+textarea { resize:none }
+address, caption, cite, code, dfn, em, i, th, var { font-style:normal; font-weight:normal }
+a { text-decoration:none; outline:0 }
+a:hover { text-decoration:none }
+
+/*======== 定义变量===========*/
+@color:#333;
+@colorfff:#fff;
+@color-font-gray:#a8aeb4;
+@green:#2c9445;
+@darkblue:#272b36;
+@topbgcolor:#383c47;
+@textcenter:center;
+@textright:right;
+@textleft:left;
+@linktext-color:#337ab7;
+@margin-base-computed:10px;
+@margin-base-area:20px;
+@margin-base-small:4px;
+@padding-base-vertical:6px;
+@padding-base-horizontal:12px;
+@padding-base-text:4px;
+@topheight:30px;
+@line-height-base:35px;
+@line-height-computed:20px;
+@line-height-menu:40px;
+@navheight:@topheight + 20px;
+@navlineheight:@topheight + 20px;
+@border-radius-base:4px;
+@btn-font-size:12px;
+@panel-bg:#efefef;
+@panel-border-radius:4px;
+@panel-body-padding:15px;
+@panel-heading-padding:10px 15px;
+@table-border-color:#e8e8e8;
+@table-cell-padding:20px;
+@font-weight-bold:bold;
+@font-size-title:16px;
+@font-size-base:12px;
+@table-bg-hover:#dfdfdf;
+@tdcolor:#f4f4f4;
+@input-height-base:38px;
+@input-bg:#fff;
+@input-border:1px solid #dfdfdf;
+@position-absolute: absolute;
+@width-nextmenu:160px;
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  float: left;
+}
+
+// 通条 ======================================================================
+.toptoolbar {
+  background: @topbgcolor;
+  height: @topheight;
+}
+
+// 一级菜单 ======================================================================
+.navpanel{
+  background: @darkblue;
+  height: @navheight;
+  nav ul li{
+    float: left;
+    margin:0 10px;
+    text-align: @textcenter;
+    line-height: @navlineheight;
+    padding:0 @padding-base-horizontal;
+  }
+  a {
+    color: @colorfff;
+    &:hover {
+     color: @color + #ccc;
+   }
+
+ }
+ nav ul li:hover, nav ul li.act{
+  background: @darkblue - 10;
+} 
+}
+.navlow-line{ 
+  background: @darkblue - 10;
+  height: 4px;
+}
+// 面板 ======================================================================
+.panel {
+  margin-bottom: @line-height-computed;
+  margin:@margin-base-computed @margin-base-computed ;
+  background-color: @panel-bg;
+  border: 1px solid transparent;
+  border-radius: @panel-border-radius;
+  box-shadow:0 1px 1px #ccc;
+}
+.panel-body {
+  padding: @panel-body-padding;
+  &:extend(.clearfix all);
+}
+.panel-heading {
+  padding: @panel-heading-padding;
+  border-bottom: 1px solid transparent;
+}
+.border-top-radius{
+  border-radius: @panel-border-radius - 1;
+}
+
+// 表格 ======================================================================
+table{
+  width: 100%;
+  margin-bottom:@line-height-computed;
+}
+table tr th{
+  font-weight: @font-weight-bold;
+  border-bottom:2px solid @table-border-color;
+}
+table{
+  tr, th, td {
+    height: @line-height-base;
+    line-height: @line-height-base+1;
+    height: @line-height-base;
+    line-height: @line-height-base+1;
+    border-bottom:1px solid @table-border-color;
+    text-align: @textcenter;
+  }
+  tr.tdcolor {
+    background: @tdcolor;
+  }
+  tr td a{
+    padding:0 @padding-base-text;
+    color: @linktext-color;
+    &:hover{text-decoration: underline;}
+  }
+}
+table .table-hover {
+  tbody tr:hover {
+    background-color: @table-bg-hover;
+  }
+}
+
+// btn ======================================================================
+.btn-success{
+  background: @green + 2;
+  color: @colorfff;
+}
+.btnarea{
+  text-align:@textright;
+}
+.btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: @btn-font-size;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.button-size
+{
+  padding:@padding-base-vertical @padding-base-horizontal * 2.3;
+  border-radius: @border-radius-base;
+}
+
+
+// select input ====================================================================
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: @input-height-base; 
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @color;
+  background-color: @input-bg;
+  background-image: none;
+  border: 1px solid @input-border;
+  border-radius: @border-radius-base; 
+  // .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  // .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+}
+.control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+  height: @line-height-base;
+  line-height: @line-height-base;
+}
+
+// pagenumber =======================================================================
+
+.page{
+  text-align: right;
+  margin: @margin-base-computed @margin-base-small;
+}
+.page-group{
+  a.page{
+    display:inline-block;
+    background-color: @color(#efefef);
+    border: 1px solid transparent;
+    border-radius: @border-radius-base;
+    box-shadow:0 1px 1px #ccc;
+    padding:4px 9px;
+  }
+  a.page-act, a:hover{
+    background: @green;
+    color: @colorfff;
+  }
+}
+
+// area-title =======================================================================
+.area-title{
+  margin: @margin-base-area;
+  font-size:@font-size-title;
+  .tit-ico{
+    display: inline-block;
+    background: @green;
+    width: 4px;
+    height: 17px;
+    vertical-align: -6px;
+    border-radius: @border-radius-base;
+    margin: @margin-base-small;
+  }
+}
+
+// nextmenu ====================================================================
+
+.nextmenu{
+  width:@width-nextmenu;
+  background: @darkblue;
+  position: @position-absolute;
+  height: 100%;
+  ul li{
+    height:@line-height-menu;
+    line-height: @line-height-menu+1;
+    text-align: @textcenter;
+    border-bottom: 1px solid @darkblue - 10;
+  }
+  ul li a{
+    font-size:@font-size-base;
+    color: @color-font-gray;
+    text-align:@textcenter;
+  }
+}
+
+
+// main =========================================================================
+.main{
+  position: @position-absolute;
+  left:@width-nextmenu;
+}
