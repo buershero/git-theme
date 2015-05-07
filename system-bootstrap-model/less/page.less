@@ -11,6 +11,8 @@ a { text-decoration:none; outline:0 }
 a:hover { text-decoration:none }
 
 /*======== 定义变量===========*/
+@left:left;
+@right:right;
 @color:#333;
 @colorfff:#fff;
 @color-font-gray:#a8aeb4;
@@ -28,6 +30,7 @@ a:hover { text-decoration:none }
 @padding-base-vertical:6px;
 @padding-base-horizontal:12px;
 @padding-base-text:4px;
+@padding-base-computed:10px;
 @topheight:30px;
 @line-height-base:35px;
 @line-height-computed:20px;
@@ -52,6 +55,7 @@ a:hover { text-decoration:none }
 @input-border:1px solid #dfdfdf;
 @position-absolute: absolute;
 @width-nextmenu:160px;
+@form-margin-base:15px 4px;
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   float: left;
 }
@@ -60,8 +64,31 @@ a:hover { text-decoration:none }
 .toptoolbar {
   background: @topbgcolor;
   height: @topheight;
+  line-height: @topheight;
+  color: @color-font-gray;
+  padding: 0 @padding-base-computed;
+  .left{ 
+    float: @left;
+  }
+  .logo{
+    font-size: @font-size-title;
+  }
+  .right{
+    float: @right;
+    i b{
+      padding:0 @padding-base-text;
+      a{
+        color: @darkblue-aidcolor;
+        text-decoration: underline;
+        padding:0 @padding-base-text;
+        &:hover{
+        color:@darkblue-aidcolor - 20;
+      }
+      }
+      
+    }
+  }
 }
-
 // 一级菜单 ======================================================================
 .navpanel{
   background: @darkblue;
@@ -109,7 +136,16 @@ a:hover { text-decoration:none }
   border-radius: @panel-border-radius - 1;
 }
 
+// form======================================================================
+.form-margin-base{
+  margin: @form-margin-base;
+}
+
+
 // 表格 ======================================================================
+.table-panel{
+  margin: @margin-base-computed;
+}
 table{
   width: 100%;
   margin-bottom:@line-height-computed;
@@ -143,8 +179,8 @@ table .table-hover {
 }
 
 // btn ======================================================================
-.btn-success{
-  background: @green + 2;
+.btn-correct{
+  background: @darkblue-aidcolor + 2;
   color: @colorfff;
 }
 .btnarea{
@@ -207,7 +243,7 @@ table .table-hover {
     padding:4px 9px;
   }
   a.page-act, a:hover{
-    background: @green;
+    background: @darkblue-aidcolor;
     color: @colorfff;
   }
 }

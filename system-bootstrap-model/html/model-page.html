@@ -10,7 +10,12 @@
 <body>
 
     <!-- toptoolbar -->
-    <div class="toptoolbar"></div>
+    <div class="toptoolbar clearfix">
+        <div class="left logo">system name</div>
+        <div class="right">
+            <i><b>admin,</b>Welcome to login this system!<b><a href="#">quit</a></b></i>
+        </div>
+    </div>
     <!-- /toptoolbar -->
     <!-- navpanel -->
     <div class="navpanel">
@@ -61,11 +66,22 @@
                 <div class="panel-body  element-con clearfix">                  
 
                     <form class="form-inline">
-                      <div class="form-group form-group-margin">
-                        <label for="exampleInputName2">labelname：</label>
-                        <input type="text" class="form-control" id="exampleInputName2" placeholder="test">
-                    </div>
-                    <div class="form-group form-group-margin">
+                        <div class="form-group form-group-margin form-margin-base">
+                            <label for="exampleInputName2">labelname：</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="test">
+                        </div>
+                        <div class="form-group form-group-margin form-margin-base">
+                            <label>labelname：</label>
+                            <select class="form-control">
+                              <option>select1</option>
+                              <option>select2</option>
+                              <option>select3</option>
+                              <option>select4</option>
+                              <option>select5</option>
+                          </select>
+                      </div>
+
+                      <div class="form-group form-group-margin form-margin-base">
                         <label>labelname：</label>
                         <select class="form-control">
                           <option>select1</option>
@@ -76,7 +92,7 @@
                       </select>
                   </div>
 
-                  <div class="form-group form-group-margin">
+                  <div class="form-group form-group-margin form-margin-base">
                     <label>labelname：</label>
                     <select class="form-control">
                       <option>select1</option>
@@ -87,7 +103,9 @@
                   </select>
               </div>
 
-              <div class="form-group form-group-margin">
+
+
+              <div class="form-group form-group-margin form-margin-base">
                 <label>labelname：</label>
                 <select class="form-control">
                   <option>select1</option>
@@ -98,9 +116,7 @@
               </select>
           </div>
 
-
-
-          <div class="form-group form-group-margin">
+          <div class="form-group form-group-margin form-margin-base">
             <label>labelname：</label>
             <select class="form-control">
               <option>select1</option>
@@ -110,8 +126,7 @@
               <option>select5</option>
           </select>
       </div>
-
-      <div class="form-group form-group-margin">
+      <div class="form-group form-group-margin form-margin-base">
         <label>labelname：</label>
         <select class="form-control">
           <option>select1</option>
@@ -120,20 +135,10 @@
           <option>select4</option>
           <option>select5</option>
       </select>
+      ~
+      <input type="text" class="form-control" id="exampleInputName2" placeholder="test">
   </div>
-  <div class="form-group form-group-margin">
-    <label>labelname：</label>
-    <select class="form-control">
-      <option>select1</option>
-      <option>select2</option>
-      <option>select3</option>
-      <option>select4</option>
-      <option>select5</option>
-  </select>
-  ~
-  <input type="text" class="form-control" id="exampleInputName2" placeholder="test">
-</div>
-<div class="form-group form-group-margin">
+  <div class="form-group form-group-margin form-margin-base">
     <label>labelname：</label>
     <select class="form-control">
       <option>select1</option>
@@ -148,269 +153,273 @@
 
 </form>
 
-<div class="btnarea"><button type="button" class="btn btn-success">search</button><button type="button" class="btn  btn-default">reset</button></div>
+<div class="btnarea">
+    <button type="button" class="btn btn-correct">search</button>
+    <button type="button" class="btn btn-default">reset</button>
+</div>
 </div>
 </div>
 <!-- 表格-->
-<table cellspacing="0" cellpadding="0" border="0" class="table table-striped table-hover">
-    <thead>
-        <tr class="bg01">
-            <th class="nob">nob</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-            <th>th</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr>
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-        <tr class="bg01">
-            <td class="nob">1</td>
-            <td>test</td>
-            <td>2015-487878</td>
-            <td>ahtl</td>
-            <td>ahtl</td>
-            <td>111111111111111</td>
-            <td>null</td>
-            <td>Tiffany</td>
-            <td>2015-01-26 17:43:23</td>
-            <td>lee</td>
-            <td>2015-01-26 17:43:23</td>
-            <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
-        </tr>
-    </tbody>
-</table>
-
+<div class="table-panel">
+    <table cellspacing="0" cellpadding="0" border="0" class="table table-striped table-hover">
+        <thead>
+            <tr class="bg01">
+                <th class="nob">nob</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+                <th>th</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr>
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+            <tr class="bg01">
+                <td class="nob">1</td>
+                <td>test</td>
+                <td>2015-487878</td>
+                <td>ahtl</td>
+                <td>ahtl</td>
+                <td>111111111111111</td>
+                <td>null</td>
+                <td>Tiffany</td>
+                <td>2015-01-26 17:43:23</td>
+                <td>lee</td>
+                <td>2015-01-26 17:43:23</td>
+                <td class="cz"><a href="#">edit</a> <a href="#">commit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <!--/表格--> 
 <!--页码-->
 <!-- <nav>

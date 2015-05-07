@@ -92,6 +92,29 @@ a:hover {
 .toptoolbar {
   background: #383c47;
   height: 30px;
+  line-height: 30px;
+  color: #a8aeb4;
+  padding: 0 10px;
+}
+.toptoolbar .left {
+  float: left;
+}
+.toptoolbar .logo {
+  font-size: 16px;
+}
+.toptoolbar .right {
+  float: right;
+}
+.toptoolbar .right i b {
+  padding: 0 4px;
+}
+.toptoolbar .right i b a {
+  color: #02e4a2;
+  text-decoration: underline;
+  padding: 0 4px;
+}
+.toptoolbar .right i b a:hover {
+  color: #00da98;
 }
 .navpanel {
   background: #272b36;
@@ -136,6 +159,12 @@ a:hover {
 .border-top-radius {
   border-radius: 3px;
 }
+.form-margin-base {
+  margin: 15px 4px;
+}
+.table-panel {
+  margin: 10px;
+}
 table {
   width: 100%;
   margin-bottom: 20px;
@@ -165,8 +194,8 @@ table tr td a:hover {
 table .table-hover tbody tr:hover {
   background-color: #dfdfdf;
 }
-.btn-success {
-  background: #2e9647;
+.btn-correct {
+  background: #04e6a4;
   color: #ffffff;
 }
 .btnarea {
@@ -219,7 +248,7 @@ table .table-hover tbody tr:hover {
 }
 .page-group a.page-act,
 .page-group a:hover {
-  background: #2c9445;
+  background: #02e4a2;
   color: #ffffff;
 }
 .area-title {
