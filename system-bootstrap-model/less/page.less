@@ -18,6 +18,7 @@ a:hover { text-decoration:none }
 @color-font-gray:#a8aeb4;
 @green:#2c9445;
 @darkblue:#272b36;
+@table-th-color:#3B6F97;
 @darkblue-aidcolor:#02e4a2;
 @topbgcolor:#383c47;
 @textcenter:center;
@@ -31,7 +32,9 @@ a:hover { text-decoration:none }
 @padding-base-horizontal:12px;
 @padding-base-text:4px;
 @padding-base-computed:10px;
+@padding-boxbody:15px;
 @topheight:30px;
+@popheight:40px;
 @line-height-base:35px;
 @line-height-computed:20px;
 @line-height-menu:40px;
@@ -55,7 +58,10 @@ a:hover { text-decoration:none }
 @input-border:1px solid #dfdfdf;
 @position-absolute: absolute;
 @width-nextmenu:160px;
-@form-margin-base:15px 4px;
+@form-margin-base:10px 4px;
+@pop-base:500px;
+@border-radius-base:4px;
+
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   float: left;
 }
@@ -82,10 +88,9 @@ a:hover { text-decoration:none }
         text-decoration: underline;
         padding:0 @padding-base-text;
         &:hover{
-        color:@darkblue-aidcolor - 20;
+          color:@darkblue-aidcolor - 20;
+        }
       }
-      }
-      
     }
   }
 }
@@ -93,6 +98,9 @@ a:hover { text-decoration:none }
 .navpanel{
   background: @darkblue;
   height: @navheight;
+  nav ul{
+    margin-left: @width-nextmenu;
+  }
   nav ul li{
     float: left;
     margin:0 10px;
@@ -102,8 +110,10 @@ a:hover { text-decoration:none }
   }
   a {
     color: @colorfff;
+    text-decoration:none;
     &:hover {
      color: @color + #ccc;
+     text-decoration: none;
    }
 
  }
@@ -153,6 +163,8 @@ table{
 table tr th{
   font-weight: @font-weight-bold;
   border-bottom:2px solid @table-border-color;
+  background: @table-th-color;
+  color: @colorfff;
 }
 table{
   tr, th, td {
@@ -231,7 +243,10 @@ table .table-hover {
 
 .page{
   text-align: right;
-  margin: @margin-base-computed @margin-base-small;
+  margin: @margin-base-computed;
+  ul{
+    margin: 0;
+  }
 }
 .page-group{
   a.page{
@@ -278,11 +293,18 @@ table .table-hover {
   }
   ul li.cur a{
     color: @darkblue-aidcolor;
+    &:hover{
+      color: @darkblue-aidcolor;
+    }
   }
   ul li a{
     font-size:@font-size-base;
     color: @color-font-gray;
     text-align:@textcenter;
+    text-decoration: none;
+    &:hover{
+      color: @color-font-gray - 10;
+    }
   }
 }
 
@@ -291,4 +313,26 @@ table .table-hover {
 .main{
   position: @position-absolute;
   left:@width-nextmenu;
+}
+
+// pop ===========================================================================
+.pop{
+  position: @position-absolute;
+  z-index: 3;
+  background: @colorfff;
+  // border: 1px solid @darkblue - 5;
+  border-radius: @border-radius-base;
+}
+.pop-base{
+  width: @pop-base;
+}
+.poptit{
+  height:@popheight;
+  line-height: @popheight + 1;
+  background: @darkblue;
+  color: @color-font-gray;
+  padding:0 @padding-base-text;
+}
+.pop-body{
+  padding:@padding-boxbody;
 }

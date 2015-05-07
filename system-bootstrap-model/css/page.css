@@ -114,11 +114,14 @@ a:hover {
   padding: 0 4px;
 }
 .toptoolbar .right i b a:hover {
-  color: #00da98;
+  color: #00d08e;
 }
 .navpanel {
   background: #272b36;
   height: 50px;
+}
+.navpanel nav ul {
+  margin-left: 160px;
 }
 .navpanel nav ul li {
   float: left;
@@ -129,9 +132,11 @@ a:hover {
 }
 .navpanel a {
   color: #ffffff;
+  text-decoration: none;
 }
 .navpanel a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 .navpanel nav ul li:hover,
 .navpanel nav ul li.act {
@@ -160,7 +165,7 @@ a:hover {
   border-radius: 3px;
 }
 .form-margin-base {
-  margin: 15px 4px;
+  margin: 10px 4px;
 }
 .table-panel {
   margin: 10px;
@@ -172,6 +177,8 @@ table {
 table tr th {
   font-weight: bold;
   border-bottom: 2px solid #e8e8e8;
+  background: #3b6f97;
+  color: #ffffff;
 }
 table tr,
 table th,
@@ -236,7 +243,10 @@ table .table-hover tbody tr:hover {
 }
 .page {
   text-align: right;
-  margin: 10px 4px;
+  margin: 10px;
+}
+.page ul {
+  margin: 0;
 }
 .page-group a.page {
   display: inline-block;
@@ -279,12 +289,38 @@ table .table-hover tbody tr:hover {
 .nextmenu ul li.cur a {
   color: #02e4a2;
 }
+.nextmenu ul li.cur a:hover {
+  color: #02e4a2;
+}
 .nextmenu ul li a {
   font-size: 12px;
   color: #a8aeb4;
   text-align: center;
+  text-decoration: none;
+}
+.nextmenu ul li a:hover {
+  color: #9ea4aa;
 }
 .main {
   position: absolute;
   left: 160px;
+}
+.pop {
+  position: absolute;
+  z-index: 3;
+  background: #ffffff;
+  border-radius: 4px;
+}
+.pop-base {
+  width: 500px;
+}
+.poptit {
+  height: 40px;
+  line-height: 41px;
+  background: #272b36;
+  color: #a8aeb4;
+  padding: 0 4px;
+}
+.pop-body {
+  padding: 15px;
 }
