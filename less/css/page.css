@@ -1,0 +1,233 @@
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.125 Microsoft YaHei;
+}
+sub,
+sup {
+  line-height: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+th,
+td,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+hr {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+li {
+  list-style: none;
+}
+fieldset,
+img {
+  border: 0;
+}
+input,
+textarea {
+  outline-style: none;
+}
+textarea {
+  resize: none;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+/*======== 定义变量===========*/
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+  float: left;
+}
+.toptoolbar {
+  background: #333333;
+  height: 30px;
+}
+.navpanel {
+  background: #2c9445;
+  height: 50px;
+}
+.navpanel nav ul li {
+  float: left;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0 12px;
+}
+.navpanel a {
+  color: #ffffff;
+}
+.navpanel a:hover {
+  color: #ffffff;
+}
+.navpanel nav ul li:hover,
+.navpanel nav ul li.act {
+  background: #228a3b;
+}
+.panel {
+  margin-bottom: 20px;
+  margin: 10px 10px;
+  background-color: #efefef;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px #ccc;
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+}
+.border-top-radius {
+  border-radius: 3px;
+}
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+table tr th {
+  font-weight: bold;
+  border-bottom: 2px solid #e8e8e8;
+}
+table tr,
+table th,
+table td {
+  height: 35px;
+  line-height: 36px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+}
+table tr.tdcolor {
+  background: #f4f4f4;
+}
+table tr td a {
+  padding: 0 4px;
+  color: #337ab7;
+}
+table tr td a:hover {
+  text-decoration: underline;
+}
+table .table-hover tbody tr:hover {
+  background-color: #dfdfdf;
+}
+.btn-success {
+  background: #2e9647;
+  color: #ffffff;
+}
+.btnarea {
+  text-align: right;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.button-size {
+  padding: 6px 27.6px;
+  border-radius: 4px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 35px;
+  color: #333333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+.control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+  height: 35px;
+  line-height: 35px;
+}
+.page {
+  text-align: right;
+  margin: 10px 4px;
+}
+.page-group a.page {
+  display: inline-block;
+  background-color: #333333 #efefef;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px #ccc;
+  padding: 4px 9px;
+}
+.page-group a.page-act,
+.page-group a:hover {
+  background: #2c9445;
+  color: #ffffff;
+}
+.area-title {
+  margin: 20px;
+  font-size: 16px;
+}
+.area-title .tit-ico {
+  display: inline-block;
+  background: #2c9445;
+  width: 4px;
+  height: 17px;
+  vertical-align: -6px;
+  border-radius: 4px;
+  margin: 4px;
+}
