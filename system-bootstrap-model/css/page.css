@@ -218,6 +218,9 @@ table .table-hover tbody tr:hover {
   border: 1px solid transparent;
   white-space: nowrap;
 }
+.btn i {
+  padding: 0 4px;
+}
 .button-size {
   padding: 6px 27.6px;
   border-radius: 4px;
@@ -280,8 +283,13 @@ table .table-hover tbody tr:hover {
   position: absolute;
   height: 100%;
 }
+.nextmenu .nextmenu3 li a {
+  color: #a8aeb4;
+}
+.nextmenu .nextmenu3 li.cur a {
+  color: #02e4a2;
+}
 .nextmenu ul li {
-  height: 40px;
   line-height: 41px;
   text-align: center;
   border-bottom: 1px solid #1d212c;
@@ -300,6 +308,12 @@ table .table-hover tbody tr:hover {
 }
 .nextmenu ul li a:hover {
   color: #9ea4aa;
+}
+.nextmenu ul li a i.nextmenufa {
+  position: absolute;
+  line-height: 36px;
+  right: 0;
+  margin-right: 10px;
 }
 .main {
   position: absolute;

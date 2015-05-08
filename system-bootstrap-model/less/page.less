@@ -207,6 +207,9 @@ table .table-hover {
   cursor: pointer;
   border: 1px solid transparent;
   white-space: nowrap;
+  i{
+    padding:0 @padding-base-text;
+  }
 }
 .button-size
 {
@@ -285,8 +288,13 @@ table .table-hover {
   background: @darkblue;
   position: @position-absolute;
   height: 100%;
+  .nextmenu3 li a{
+    color: @color-font-gray;
+  }
+  .nextmenu3 li.cur a{
+    color: @darkblue-aidcolor;
+  }
   ul li{
-    height:@line-height-menu;
     line-height: @line-height-menu+1;
     text-align: @textcenter;
     border-bottom: 1px solid @darkblue - 10;
@@ -305,8 +313,15 @@ table .table-hover {
     &:hover{
       color: @color-font-gray - 10;
     }
+    i.nextmenufa{
+      position: @position-absolute;
+      line-height: 36px;
+      right: 0;
+      margin-right: @margin-base-computed;
+    }
   }
 }
+
 
 
 // main =========================================================================
