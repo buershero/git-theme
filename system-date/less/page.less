@@ -34,6 +34,7 @@ a:hover { text-decoration:none }
 @margin-base-computed:10px;
 @margin-base-area:20px;
 @margin-base-small:4px;
+@margin-base-moderate:15px;
 @padding-base-vertical:6px;
 @padding-base-horizontal:12px;
 @padding-base-text:4px;
@@ -56,6 +57,7 @@ a:hover { text-decoration:none }
 @table-cell-padding:20px;
 @font-weight-bold:bold;
 @font-size-title:16px;
+@font-size-title-2x:20px;
 @font-size-base:12px;
 @table-bg-hover:#dfdfdf;
 @tdcolor:#f4f4f4;
@@ -67,7 +69,7 @@ a:hover { text-decoration:none }
 @form-margin-base:10px 4px;
 @pop-base:500px;
 @border-radius-base:4px;
-
+@panel-border:1px solid #ddd;
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   float: left;
 }
@@ -163,7 +165,9 @@ a:hover { text-decoration:none }
 
 // 表格 ======================================================================
 .table-panel{
-  margin: @margin-base-computed+@margin-base-computed 0;
+  padding: @padding-base-computed;
+  margin-top: -1px;
+  border:@panel-border;
 }
 table{
   width: 100%;
@@ -186,6 +190,13 @@ table{
   }
   tr.tdcolor {
     background: @tdcolor;
+  }
+  th a{
+      i{
+      color: @colorfff;
+      &:hover{color:@color-font-gray;}
+    }
+
   }
   tr td a{
     padding:0 @padding-base-text;
@@ -373,6 +384,9 @@ table .table-hover {
 }
 
 // tit
+.tit{
+  margin-bottom: @margin-base-moderate;
+}
 .tit-l{
   display: inline-block;
   background: @darkblue-aidcolor;
@@ -382,7 +396,7 @@ table .table-hover {
   vertical-align: -4px;
 }
 .titname{
-  font-size: @font-size-title;
+  font-size: @font-size-title-2x;
   i{ 
     font-size: @font-size-base;
     font-style: inherit;
@@ -391,8 +405,7 @@ table .table-hover {
 }
 .search{
   position: @position-absolute;
-  top: 14px;
 }
-.tit ul.nav{
+.con ul.nav{
    margin-top: @margin-base-area;
 }
