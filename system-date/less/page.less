@@ -1,3 +1,8 @@
+body {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #333;
+}
 body, button, input, select, textarea { font:12px/1.125 Microsoft YaHei }
 sub, sup { line-height:0 }
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr { margin:0; padding:0 }
@@ -17,6 +22,7 @@ a:hover { text-decoration:none }
 @colorfff:#fff;
 @color-font-gray:#a8aeb4;
 @green:#2c9445;
+@color-font-warm:#de5400;
 @darkblue:#272b36;
 @table-th-color:#3B6F97;
 @darkblue-aidcolor:#02e4a2;
@@ -57,7 +63,7 @@ a:hover { text-decoration:none }
 @input-bg:#fff;
 @input-border:1px solid #dfdfdf;
 @position-absolute: absolute;
-@width-nextmenu:160px;
+@width-nextmenu:8%;
 @form-margin-base:10px 4px;
 @pop-base:500px;
 @border-radius-base:4px;
@@ -157,7 +163,7 @@ a:hover { text-decoration:none }
 
 // 表格 ======================================================================
 .table-panel{
-  margin: @margin-base-computed;
+  margin: @margin-base-computed+@margin-base-computed 0;
 }
 table{
   width: 100%;
@@ -185,6 +191,17 @@ table{
     padding:0 @padding-base-text;
     color: @linktext-color;
     &:hover{text-decoration: underline;}
+  }
+  tr{
+    td.textright{ 
+      text-align: @textright;
+    }
+    td.color-font-warm{
+      color: @color-font-warm;
+    }
+    td.green{
+      color: @green;
+    }
   }
 }
 table .table-hover {
@@ -316,7 +333,7 @@ table .table-hover {
     }
     i.nextmenufa{
       position: @position-absolute;
-      line-height: 36px;
+      line-height: 44px;
       right: 0;
       margin-right: @margin-base-computed;
     }
@@ -329,6 +346,8 @@ table .table-hover {
 .main{
   position: @position-absolute;
   left:@width-nextmenu;
+  width: 100% - @width-nextmenu;
+  padding: @padding-base-computed + @padding-base-computed;
 }
 
 // pop ===========================================================================
@@ -351,4 +370,22 @@ table .table-hover {
 }
 .pop-body{
   padding:@padding-boxbody;
+}
+
+// tit
+.tit-l{
+  display: inline-block;
+  background: @darkblue-aidcolor;
+  border-radius: @border-radius-base;
+  width: @border-radius-base;
+  height: @border-radius-base + 16px;
+  vertical-align: -4px;
+}
+.titname{
+  font-size: @font-size-title;
+  i{ 
+    font-size: @font-size-base;
+    font-style: inherit;
+    padding-left: @padding-base-computed;
+  }
 }

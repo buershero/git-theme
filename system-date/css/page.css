@@ -1,3 +1,8 @@
+body {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #333;
+}
 body,
 button,
 input,
@@ -121,7 +126,7 @@ a:hover {
   height: 50px;
 }
 .navpanel nav ul {
-  margin-left: 160px;
+  margin-left: 8%;
 }
 .navpanel nav ul li {
   float: left;
@@ -171,7 +176,7 @@ a:hover {
   margin: 10px 4px;
 }
 .table-panel {
-  margin: 10px;
+  margin: 20px 0;
 }
 table {
   width: 100%;
@@ -200,6 +205,15 @@ table tr td a {
 }
 table tr td a:hover {
   text-decoration: underline;
+}
+table tr td.textright {
+  text-align: right;
+}
+table tr td.color-font-warm {
+  color: #de5400;
+}
+table tr td.green {
+  color: #2c9445;
 }
 table .table-hover tbody tr:hover {
   background-color: #dfdfdf;
@@ -281,7 +295,7 @@ table .table-hover tbody tr:hover {
   margin: 4px;
 }
 .nextmenu {
-  width: 160px;
+  width: 8%;
   background: #272b36;
   position: absolute;
   height: 100%;
@@ -314,13 +328,16 @@ table .table-hover tbody tr:hover {
 }
 .nextmenu ul li a i.nextmenufa {
   position: absolute;
-  line-height: 36px;
+  line-height: 44px;
   right: 0;
   margin-right: 10px;
 }
 .main {
   position: absolute;
-  left: 160px;
+  left: 8%;
+  width: 92%;
+  padding: 20px;
+  min-width: 1500px;
 }
 .pop {
   position: absolute;
@@ -340,4 +357,20 @@ table .table-hover tbody tr:hover {
 }
 .pop-body {
   padding: 15px;
+}
+.tit-l {
+  display: inline-block;
+  background: #02e4a2;
+  border-radius: 4px;
+  width: 4px;
+  height: 20px;
+  vertical-align: -4px;
+}
+.titname {
+  font-size: 16px;
+}
+.titname i {
+  font-size: 12px;
+  font-style: inherit;
+  padding-left: 10px;
 }
