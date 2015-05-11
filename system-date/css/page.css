@@ -337,7 +337,6 @@ table .table-hover tbody tr:hover {
   left: 8%;
   width: 92%;
   padding: 20px;
-  min-width: 1500px;
 }
 .pop {
   position: absolute;
@@ -373,4 +372,11 @@ table .table-hover tbody tr:hover {
   font-size: 12px;
   font-style: inherit;
   padding-left: 10px;
+}
+.search {
+  position: absolute;
+  top: 14px;
+}
+.tit ul.nav {
+  margin-top: 20px;
 }
