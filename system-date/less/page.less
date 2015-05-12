@@ -21,7 +21,9 @@ a:hover { text-decoration:none }
 @color:#333;
 @colorfff:#fff;
 @color-font-gray:#a8aeb4;
+@color-shallow-gray:#efefef;
 @green:#2c9445;
+@red:#C60111;
 @color-font-warm:#de5400;
 @darkblue:#272b36;
 @table-th-color:#3B6F97;
@@ -69,11 +71,17 @@ a:hover { text-decoration:none }
 @form-margin-base:10px 4px;
 @pop-base:500px;
 @border-radius-base:4px;
+@border-radius-circle:15px;
 @panel-border:1px solid #ddd;
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
   float: left;
 }
-
+.right{
+  float: @right;
+}
+.left{
+  float: @left;
+}
 // 通条 ======================================================================
 .toptoolbar {
   background: @topbgcolor;
@@ -402,10 +410,47 @@ table .table-hover {
     font-style: inherit;
     padding-left: @padding-base-computed;
   }
+  a{
+    background: @darkblue-aidcolor;
+    color: @colorfff;
+    border-radius: @border-radius-circle;
+    padding: @padding-base-text @padding-base-computed;
+    &:hover{
+      color: @colorfff +10;
+      text-decoration: none;;
+    }
+    h4,h5{
+      margin: 0;
+    }
+  }
 }
 .search{
   position: @position-absolute;
 }
-.con ul.nav{
-   margin-top: @margin-base-area;
+
+
+// datearea
+
+.datearea{
+  dl{
+    float: @left;
+    width:12%;
+    margin: @margin-base-computed;
+    border-radius: @border-radius-base;
+    background:@color-shallow-gray;
+    padding: @padding-base-computed + @padding-base-computed;
+    h3,h4{
+      margin-top:0;
+    }
+    dd{
+      line-height: @line-height-computed;
+    }
+    dd i.fa-arrow-down{
+     color:@green;
+    }
+    dd i.fa-arrow-up{
+     color:@red;
+    }
+  }
+
 }

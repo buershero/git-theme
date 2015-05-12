@@ -94,6 +94,12 @@ a:hover {
 .col-lg-12 {
   float: left;
 }
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
 .toptoolbar {
   background: #383c47;
   height: 30px;
@@ -384,9 +390,41 @@ table .table-hover tbody tr:hover {
   font-style: inherit;
   padding-left: 10px;
 }
+.titname a {
+  background: #02e4a2;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 4px 10px;
+}
+.titname a:hover {
+  color: #ffffff 10;
+  text-decoration: none;
+}
+.titname a h4,
+.titname a h5 {
+  margin: 0;
+}
 .search {
   position: absolute;
 }
-.con ul.nav {
-  margin-top: 20px;
+.datearea dl {
+  float: left;
+  width: 12%;
+  margin: 10px;
+  border-radius: 4px;
+  background: #efefef;
+  padding: 20px;
+}
+.datearea dl h3,
+.datearea dl h4 {
+  margin-top: 0;
+}
+.datearea dl dd {
+  line-height: 20px;
+}
+.datearea dl dd i.fa-arrow-down {
+  color: #2c9445;
+}
+.datearea dl dd i.fa-arrow-up {
+  color: #c60111;
 }
