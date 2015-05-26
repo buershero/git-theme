@@ -2,6 +2,8 @@ body {
   font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   line-height: 1.42857143;
   color: #333;
+  min-width:1360px;
+  overflow-y: hidden;
 }
 body, button, input, select, textarea { font:12px/1.125 Microsoft YaHei }
 sub, sup { line-height:0 }
@@ -16,25 +18,24 @@ a { text-decoration:none; outline:0 }
 a:hover { text-decoration:none }
 
 /*======== 定义变量===========*/
-@left:left;
-@right:right;
-@color:#333;
-@colorfff:#fff;
-@color-font-gray:#a8aeb4;
+@color-default:#333;
+@color-base:#fff;
+@color-gray:#a8aeb4;
 @color-shallow-gray:#efefef;
-@green:#2c9445;
-@red:#C60111;
+@color-shallow-blue:#6E8EFF;
 @color-font-warm:#de5400;
+@color-lime-green:#02e4a2;
+@color-dark-lime-green:#2c9445;
+@color-linktext:#337ab7;//a:link color
+@red:#eb0000;
 @darkblue:#272b36;
-@table-th-color:#3B6F97;
-@darkblue-aidcolor:#02e4a2;
-@topbgcolor:#383c47;
-@textcenter:center;
-@textright:right;
-@textleft:left;
-@linktext-color:#337ab7;
+@th-color:#3B6F97;
+
+@header-bgcolor:#383c47;
+@header-height:30px;
+
 @margin-base-computed:10px;
-@margin-base-area:20px;
+@margin-base-larger:20px;
 @margin-base-small:4px;
 @margin-base-moderate:15px;
 @padding-base-vertical:6px;
@@ -42,85 +43,78 @@ a:hover { text-decoration:none }
 @padding-base-text:4px;
 @padding-base-computed:10px;
 @padding-boxbody:15px;
-@topheight:30px;
-@popheight:40px;
+
+@pop-header-height:40px;
+
 @line-height-base:35px;
 @line-height-computed:20px;
 @line-height-menu:40px;
-@navheight:@topheight + 20px;
-@navlineheight:@topheight + 20px;
+
+@navheight:@header-height + 20px;
+@navlineheight:@header-height + 20px;
+
 @border-radius-base:4px;
-@btn-font-size:12px;
+@border-radius-circle:15px;
+@border-radius-round:50px;
+
 @panel-bg:#efefef;
 @panel-border-radius:4px;
 @panel-body-padding:15px;
 @panel-heading-padding:10px 15px;
+
 @table-border-color:#e8e8e8;
 @table-cell-padding:20px;
-@font-weight-bold:bold;
+
 @font-size-title:16px;
 @font-size-title-2x:20px;
 @font-size-base:12px;
 @table-bg-hover:#dfdfdf;
-@tdcolor:#f4f4f4;
+
 @input-height-base:38px;
-@input-bg:#fff;
 @input-border:1px solid #dfdfdf;
-@position-absolute: absolute;
 @width-nextmenu:8%;
 @form-margin-base:10px 4px;
-@pop-base:500px;
-@border-radius-base:4px;
-@border-radius-circle:15px;
+
+@pop-base-width:500px;
 @panel-border:1px solid #ddd;
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-  float: left;
-}
-.right{
-  float: @right;
-}
-.left{
-  float: @left;
-}
+
 // 通条 ======================================================================
-.toptoolbar {
-  background: @topbgcolor;
-  height: @topheight;
-  line-height: @topheight;
-  color: @color-font-gray;
+header{
+  background: @header-bgcolor;
+  height: @header-height;
+  line-height: @header-height;
+  color: @color-gray;
   padding: 0 @padding-base-computed;
-  .left{ 
-    float: @left;
-  }
   .logo{
     font-size: @font-size-title;
   }
-  .right{
-    float: @right;
-    i b{
+  .pull-right{
+    span em{
       padding:0 @padding-base-text;
       a{
-        color: @darkblue-aidcolor;
+        color: @color-lime-green;
         text-decoration: underline;
         padding:0 @padding-base-text;
         &:hover{
-          color:@darkblue-aidcolor - 20;
+          color:@color-lime-green - 20;
         }
       }
     }
   }
 }
+
 // 一级菜单 ======================================================================
-.navpanel{
+.nav-panel{
   background: @darkblue;
   height: @navheight;
+  border-bottom: 4px solid @darkblue - 10;
   nav ul{
     margin-left: @width-nextmenu;
   }
   nav ul li{
     float: left;
     margin:0 10px;
-    text-align: @textcenter;
+    text-align: center;
     line-height: @navlineheight;
     padding:0 @padding-base-horizontal;
     i{
@@ -128,10 +122,11 @@ a:hover { text-decoration:none }
     }
   }
   a {
-    color: @colorfff;
+    color: @color-base;
     text-decoration:none;
+    display: block;
     &:hover {
-     color: @color + #ccc;
+     color: @color-default + #ccc;
      text-decoration: none;
    }
 
@@ -140,10 +135,7 @@ a:hover { text-decoration:none }
   background: @darkblue - 10;
 } 
 }
-.navlow-line{ 
-  background: @darkblue - 10;
-  height: 4px;
-}
+
 // 面板 ======================================================================
 .panel {
   margin-bottom: @line-height-computed;
@@ -170,10 +162,26 @@ a:hover { text-decoration:none }
   margin: @form-margin-base;
 }
 
+.search span{
+  position: relative;
+  i{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    color: @color-lime-green;
+  }
+}
+
+.nav-search-input {
+  border: 1px solid @color-gray;
+  height: 28px;
+  padding:2px 0 2px 20px;
+  border-radius: 4px;
+}
 
 // 表格 ======================================================================
 .table-panel{
-  padding: @padding-base-computed;
+  padding: @padding-base-computed*3;
   margin-top: -1px;
   border:@panel-border;
 }
@@ -182,10 +190,10 @@ table{
   margin-bottom:@line-height-computed;
 }
 table tr th{
-  font-weight: @font-weight-bold;
+  font-weight: bold;
   border-bottom:2px solid @table-border-color;
-  background: @table-th-color;
-  color: @colorfff;
+  background: @th-color;
+  color: @color-base;
 }
 table{
   tr, th, td {
@@ -194,32 +202,26 @@ table{
     height: @line-height-base;
     line-height: @line-height-base+1;
     border-bottom:1px solid @table-border-color;
-    text-align: @textcenter;
-  }
-  tr.tdcolor {
-    background: @tdcolor;
+    text-align: center;
   }
   th a{
-      i{
-      color: @colorfff;
-      &:hover{color:@color-font-gray;}
+    i{
+      color: @color-base;
+      &:hover{color:@color-gray;}
     }
 
   }
   tr td a{
     padding:0 @padding-base-text;
-    color: @linktext-color;
+    color: @color-linktext;
     &:hover{text-decoration: underline;}
   }
   tr{
-    td.textright{ 
-      text-align: @textright;
-    }
     td.color-font-warm{
       color: @color-font-warm;
     }
     td.green{
-      color: @green;
+      color: @color-dark-lime-green;
     }
   }
 }
@@ -231,16 +233,16 @@ table .table-hover {
 
 // btn ======================================================================
 .btn-correct{
-  background: @darkblue-aidcolor + 2;
-  color: @colorfff;
+  background: @color-lime-green + 2;
+  color: @color-base;
 }
 .btnarea{
-  text-align:@textright;
+  text-align:right;
 }
 .btn{
   display: inline-block;
   margin-bottom: 0;
-  font-size: @btn-font-size;
+  font-size:@font-size-base;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -266,8 +268,7 @@ table .table-hover {
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
   line-height: @line-height-base;
-  color: @color;
-  background-color: @input-bg;
+  color: @color-default;
   background-image: none;
   border: 1px solid @input-border;
   border-radius: @border-radius-base; 
@@ -291,25 +292,25 @@ table .table-hover {
 .page-group{
   a.page{
     display:inline-block;
-    background-color: @color(#efefef);
+    // background-color: @color(#efefef);
     border: 1px solid transparent;
     border-radius: @border-radius-base;
     box-shadow:0 1px 1px #ccc;
     padding:4px 9px;
   }
   a.page-act, a:hover{
-    background: @darkblue-aidcolor;
-    color: @colorfff;
+    background: @color-lime-green;
+    color: @color-base;
   }
 }
 
 // area-title =======================================================================
 .area-title{
-  margin: @margin-base-area;
+  margin: @margin-base-larger;
   font-size:@font-size-title;
   .tit-ico{
     display: inline-block;
-    background: @green;
+    background: @color-dark-lime-green;
     width: 4px;
     height: 17px;
     vertical-align: -6px;
@@ -322,36 +323,43 @@ table .table-hover {
 
 .nextmenu{
   width:@width-nextmenu;
+  min-width: 80px;
   background: @darkblue;
-  position: @position-absolute;
+  position:absolute;
   height: 100%;
+  left:0;
+  bottom: 0;
+  top:80px;
+  z-index: 2;
+
   .nextmenu3 li a{
-    color: @color-font-gray;
+    color: @color-gray;
   }
   .nextmenu3 li.cur a{
-    color: @darkblue-aidcolor;
+    color: @color-lime-green;
   }
   ul li{
     line-height: @line-height-menu+1;
-    text-align: @textcenter;
+    text-align: center;
     border-bottom: 1px solid @darkblue - 10;
   }
   ul li.cur a{
-    color: @darkblue-aidcolor;
+    color: @color-lime-green;
     &:hover{
-      color: @darkblue-aidcolor;
+      color: @color-lime-green;
     }
   }
   ul li a{
     font-size:@font-size-base;
-    color: @color-font-gray;
-    text-align:@textcenter;
+    color: @color-gray;
+    text-align:center;
     text-decoration: none;
+    display: block;
     &:hover{
-      color: @color-font-gray - 10;
+      color: @color-gray - 10;
     }
     i.nextmenufa{
-      position: @position-absolute;
+      position:absolute;
       line-height: 44px;
       right: 0;
       margin-right: @margin-base-computed;
@@ -363,60 +371,45 @@ table .table-hover {
 
 // main =========================================================================
 .main{
-  position: @position-absolute;
+  position:absolute;
   left:@width-nextmenu;
   width: 100% - @width-nextmenu;
   padding: @padding-base-computed + @padding-base-computed;
+  min-width: 1300px;
+  bottom: 0;
+  left: @width-nextmenu;
+  right: 0;
+  overflow: auto;
+  top: @header-height + @navheight;
+  z-index: 1;
 }
 
-// pop ===========================================================================
-.pop{
-  position: @position-absolute;
-  z-index: 3;
-  background: @colorfff;
-  // border: 1px solid @darkblue - 5;
-  border-radius: @border-radius-base;
+// page-title 
+.title-base{
+  margin-bottom: @margin-base-computed*2;
 }
-.pop-base{
-  width: @pop-base;
-}
-.poptit{
-  height:@popheight;
-  line-height: @popheight + 1;
-  background: @darkblue;
-  color: @color-font-gray;
-  padding:0 @padding-base-text;
-}
-.pop-body{
-  padding:@padding-boxbody;
-}
-
-// tit
-.tit{
-  margin-bottom: @margin-base-moderate;
-}
-.tit-l{
+.title-icon{
   display: inline-block;
-  background: @darkblue-aidcolor;
+  background: @color-lime-green;
   border-radius: @border-radius-base;
   width: @border-radius-base;
   height: @border-radius-base + 16px;
   vertical-align: -4px;
 }
-.titname{
+.title-name{
   font-size: @font-size-title-2x;
-  i{ 
+  small{ 
     font-size: @font-size-base;
     font-style: inherit;
     padding-left: @padding-base-computed;
   }
   a{
-    background: @darkblue-aidcolor;
-    color: @colorfff;
+    background: @color-lime-green - 50;
+    color: @color-base;
     border-radius: @border-radius-circle;
     padding: @padding-base-text @padding-base-computed;
     &:hover{
-      color: @colorfff +10;
+      color: @color-base + 10;
       text-decoration: none;;
     }
     h4,h5{
@@ -424,33 +417,46 @@ table .table-hover {
     }
   }
 }
-.search{
-  position: @position-absolute;
-}
-
-
 // datearea
-
-.datearea{
-  dl{
-    float: @left;
-    width:12%;
-    margin: @margin-base-computed;
+.main-area{
+  padding: @padding-base-computed*3 @padding-base-computed;
+}
+.date-area
+{
+  .infobox{
+    float: left;
+    width:15%;
+    margin: @margin-base-moderate;
     border-radius: @border-radius-base;
-    background:@color-shallow-gray;
     padding: @padding-base-computed + @padding-base-computed;
     h3,h4{
       margin-top:0;
-    }
-    dd{
-      line-height: @line-height-computed;
-    }
-    dd i.fa-arrow-down{
-     color:@green;
-    }
-    dd i.fa-arrow-up{
-     color:@red;
-    }
+    } 
   }
-
+  .infobox-gray{
+  background:@color-shallow-gray;
 }
+ .infobox-date span i.fa-arrow-down{
+   color:@color-dark-lime-green;
+ }
+ .infobox-date span i.fa-arrow-up{
+   color:@red;
+ }
+ 
+.date-title{
+ border-radius: @border-radius-round;
+ width: 80px;
+ height: 80px;
+ line-height: 80px;
+ background: @color-shallow-blue;
+ text-align: center;
+ color: @color-base;
+ margin-top: @margin-base-computed *3;
+}
+}
+// chart
+.chart{
+  padding: @padding-base-computed;
+  margin: @margin-base-computed*3 0
+}
+

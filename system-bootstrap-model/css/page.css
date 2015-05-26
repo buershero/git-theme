@@ -1,3 +1,10 @@
+body {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #333;
+  min-width: 1360px;
+  overflow-y: hidden;
+}
 body,
 button,
 input,
@@ -75,79 +82,57 @@ a:hover {
   text-decoration: none;
 }
 /*======== 定义变量===========*/
-.col-lg-1,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12 {
-  float: left;
-}
-.toptoolbar {
+header {
   background: #383c47;
   height: 30px;
   line-height: 30px;
   color: #a8aeb4;
   padding: 0 10px;
 }
-.toptoolbar .left {
-  float: left;
-}
-.toptoolbar .logo {
+header .logo {
   font-size: 16px;
 }
-.toptoolbar .right {
-  float: right;
-}
-.toptoolbar .right i b {
+header .pull-right span em {
   padding: 0 4px;
 }
-.toptoolbar .right i b a {
+header .pull-right span em a {
   color: #02e4a2;
   text-decoration: underline;
   padding: 0 4px;
 }
-.toptoolbar .right i b a:hover {
+header .pull-right span em a:hover {
   color: #00d08e;
 }
-.navpanel {
+.nav-panel {
   background: #272b36;
   height: 50px;
+  border-bottom: 4px solid #1d212c;
 }
-.navpanel nav ul {
-  margin-left: 160px;
+.nav-panel nav ul {
+  margin-left: 8%;
 }
-.navpanel nav ul li {
+.nav-panel nav ul li {
   float: left;
   margin: 0 10px;
   text-align: center;
   line-height: 50px;
   padding: 0 12px;
 }
-.navpanel nav ul li i {
+.nav-panel nav ul li i {
   padding-right: 4px;
 }
-.navpanel a {
+.nav-panel a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+.nav-panel a:hover {
   color: #ffffff;
   text-decoration: none;
 }
-.navpanel a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-.navpanel nav ul li:hover,
-.navpanel nav ul li.act {
+.nav-panel nav ul li:hover,
+.nav-panel nav ul li.act {
   background: #1d212c;
-}
-.navlow-line {
-  background: #1d212c;
-  height: 4px;
 }
 .panel {
   margin-bottom: 20px;
@@ -170,8 +155,20 @@ a:hover {
 .form-margin-base {
   margin: 10px 4px;
 }
-.table-panel {
-  margin: 10px;
+.search span {
+  position: relative;
+}
+.search span i {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  color: #02e4a2;
+}
+.nav-search-input {
+  border: 1px solid #a8aeb4;
+  height: 28px;
+  padding: 2px 0 2px 20px;
+  border-radius: 4px;
 }
 table {
   width: 100%;
@@ -191,8 +188,11 @@ table td {
   border-bottom: 1px solid #e8e8e8;
   text-align: center;
 }
-table tr.tdcolor {
-  background: #f4f4f4;
+table th a i {
+  color: #ffffff;
+}
+table th a i:hover {
+  color: #a8aeb4;
 }
 table tr td a {
   padding: 0 4px;
@@ -201,11 +201,17 @@ table tr td a {
 table tr td a:hover {
   text-decoration: underline;
 }
+table tr td.color-font-warm {
+  color: #de5400;
+}
+table tr td.green {
+  color: #2c9445;
+}
 table .table-hover tbody tr:hover {
   background-color: #dfdfdf;
 }
-.btn-correct {
-  background: #04e6a4;
+.btn-default {
+  background-color: #aab0b6;
   color: #ffffff;
 }
 .btnarea {
@@ -236,7 +242,6 @@ table .table-hover tbody tr:hover {
   font-size: 12px;
   line-height: 35px;
   color: #333333;
-  background-color: #ffffff;
   background-image: none;
   border: 1px solid 1px solid #dfdfdf;
   border-radius: 4px;
@@ -249,14 +254,12 @@ table .table-hover tbody tr:hover {
 }
 .page {
   text-align: right;
-  margin: 10px;
 }
 .page ul {
   margin: 0;
 }
 .page-group a.page {
   display: inline-block;
-  background-color: #333333 #efefef;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px #ccc;
@@ -281,10 +284,15 @@ table .table-hover tbody tr:hover {
   margin: 4px;
 }
 .nextmenu {
-  width: 160px;
+  width: 8%;
+  min-width: 80px;
   background: #272b36;
   position: absolute;
   height: 100%;
+  left: 0;
+  bottom: 0;
+  top: 80px;
+  z-index: 2;
 }
 .nextmenu .nextmenu3 li a {
   color: #a8aeb4;
@@ -308,36 +316,98 @@ table .table-hover tbody tr:hover {
   color: #a8aeb4;
   text-align: center;
   text-decoration: none;
+  display: block;
 }
 .nextmenu ul li a:hover {
   color: #9ea4aa;
 }
 .nextmenu ul li a i.nextmenufa {
   position: absolute;
-  line-height: 36px;
+  line-height: 44px;
   right: 0;
   margin-right: 10px;
 }
 .main {
   position: absolute;
-  left: 160px;
+  width: 92%;
+  min-width: 1300px;
+  bottom: 0;
+  left: 8%;
+  right: 0;
+  overflow: auto;
+  top: 80px;
+  z-index: 1;
 }
-.pop {
-  position: absolute;
-  z-index: 3;
-  background: #ffffff;
+.title-base {
+  margin-bottom: 20px;
+}
+.title-icon {
+  display: inline-block;
+  background: #02e4a2;
   border-radius: 4px;
+  width: 4px;
+  height: 20px;
+  vertical-align: -4px;
 }
-.pop-base {
-  width: 500px;
+.title-name {
+  font-size: 20px;
 }
-.poptit {
-  height: 40px;
-  line-height: 41px;
-  background: #272b36;
-  color: #a8aeb4;
-  padding: 0 4px;
+.title-name small {
+  font-size: 12px;
+  font-style: inherit;
+  padding-left: 10px;
 }
-.pop-body {
-  padding: 15px;
+.title-name a {
+  background: #00b270;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 4px 10px;
+}
+.title-name a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.title-name a h4,
+.title-name a h5 {
+  margin: 0;
+}
+.date-area .infobox {
+  float: left;
+  width: 15%;
+  margin: 15px;
+  border-radius: 4px;
+  padding: 20px;
+}
+.date-area .infobox h3,
+.date-area .infobox h4 {
+  margin-top: 0;
+}
+.date-area .infobox-gray {
+  background: #efefef;
+}
+.date-area .infobox-date span i.fa-arrow-down {
+  color: #2c9445;
+}
+.date-area .infobox-date span i.fa-arrow-up {
+  color: #eb0000;
+}
+.date-area .date-title {
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: #6e8eff;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 30px;
+}
+.chart {
+  padding: 10px;
+  margin: 30px 0;
+}
+.table-area {
+  margin: 10px;
+}
+.alert {
+  margin: 10px;
 }
