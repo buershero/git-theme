@@ -411,3 +411,7 @@ table .table-hover tbody tr:hover {
 .alert {
   margin: 10px;
 }
+.ui-row {
+  margin: 10px;
+  margin-bottom: 20px;
+}
