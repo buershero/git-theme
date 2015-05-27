@@ -27,6 +27,7 @@ a:hover { text-decoration:none }
 @color-lime-green:#02e4a2;
 @color-dark-lime-green:#2c9445;
 @color-linktext:#337ab7;//a:link color
+@color-cyan:#9eccd7;
 @red:#eb0000;
 @darkblue:#272b36;
 @th-color:#3B6F97;
@@ -72,7 +73,7 @@ a:hover { text-decoration:none }
 
 @input-height-base:38px;
 @input-border:1px solid #dfdfdf;
-@width-nextmenu:8%;
+@width-nav-sidebar:8%;
 @form-margin-base:10px 4px;
 
 @pop-base-width:500px;
@@ -104,12 +105,12 @@ header{
 }
 
 // 一级菜单 ======================================================================
-.nav-panel{
+.nav-navbar{
   background: @darkblue;
   height: @navheight;
   border-bottom: 4px solid @darkblue - 10;
   nav ul{
-    margin-left: @width-nextmenu;
+    margin-left: @width-nav-sidebar;
   }
   nav ul li{
     float: left;
@@ -312,10 +313,10 @@ table .table-hover {
   }
 }
 
-// nextmenu ====================================================================
+// nav-sidebar ====================================================================
 
-.nextmenu{
-  width:@width-nextmenu;
+.nav-sidebar{
+  width:@width-nav-sidebar;
   min-width: 80px;
   background: @darkblue;
   position:absolute;
@@ -325,10 +326,10 @@ table .table-hover {
   top:80px;
   z-index: 2;
 
-  .nextmenu3 li a{
+  .nav-sidebar3 li a{
     color: @color-gray;
   }
-  .nextmenu3 li.cur a{
+  .nav-sidebar3 li.cur a{
     color: @color-lime-green;
   }
   ul li{
@@ -351,7 +352,7 @@ table .table-hover {
     &:hover{
       color: @color-gray - 10;
     }
-    i.nextmenufa{
+    i.nav-sidebarfa{
       position:absolute;
       line-height: 44px;
       right: 0;
@@ -365,15 +366,21 @@ table .table-hover {
 // main =========================================================================
 .main{
   position:absolute;
-  left:@width-nextmenu;
-  width: 100% - @width-nextmenu;
+  left:@width-nav-sidebar;
+  width: 100% - @width-nav-sidebar;
   min-width: 1300px;
   bottom: 0;
-  left: @width-nextmenu;
+  left: @width-nav-sidebar;
   right: 0;
   overflow: auto;
   top: @header-height + @navheight;
   z-index: 1;
+}
+.main > .page-header{
+  margin:0 10px 20px;
+  h4{
+    color: @color-lime-green;
+  }
 }
 
 // page-title 
@@ -462,3 +469,24 @@ table .table-hover {
   margin-bottom: @margin-base-computed*2;
 }
 
+// date ibox
+.ibox-title{
+  background-color: @color-base;
+  border-color: @color-cyan;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 4px 0px 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+.ibox-content {
+ background-color: @color-base;
+ color: inherit;
+ border-color: @color-gray + 10;
+ border-image: none;
+ border-style: solid solid none;
+ border-width: 1px 0px;
+ margin-bottom: @margin-base-computed*2;
+}

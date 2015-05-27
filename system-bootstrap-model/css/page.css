@@ -103,35 +103,35 @@ header .pull-right span em a {
 header .pull-right span em a:hover {
   color: #00d08e;
 }
-.nav-panel {
+.nav-navbar {
   background: #272b36;
   height: 50px;
   border-bottom: 4px solid #1d212c;
 }
-.nav-panel nav ul {
+.nav-navbar nav ul {
   margin-left: 8%;
 }
-.nav-panel nav ul li {
+.nav-navbar nav ul li {
   float: left;
   margin: 0 10px;
   text-align: center;
   line-height: 50px;
   padding: 0 12px;
 }
-.nav-panel nav ul li i {
+.nav-navbar nav ul li i {
   padding-right: 4px;
 }
-.nav-panel a {
+.nav-navbar a {
   color: #ffffff;
   text-decoration: none;
   display: block;
 }
-.nav-panel a:hover {
+.nav-navbar a:hover {
   color: #ffffff;
   text-decoration: none;
 }
-.nav-panel nav ul li:hover,
-.nav-panel nav ul li.act {
+.nav-navbar nav ul li:hover,
+.nav-navbar nav ul li.act {
   background: #1d212c;
 }
 .panel {
@@ -283,7 +283,7 @@ table .table-hover tbody tr:hover {
   border-radius: 4px;
   margin: 4px;
 }
-.nextmenu {
+.nav-sidebar {
   width: 8%;
   min-width: 80px;
   background: #272b36;
@@ -294,34 +294,34 @@ table .table-hover tbody tr:hover {
   top: 80px;
   z-index: 2;
 }
-.nextmenu .nextmenu3 li a {
+.nav-sidebar .nav-sidebar3 li a {
   color: #a8aeb4;
 }
-.nextmenu .nextmenu3 li.cur a {
+.nav-sidebar .nav-sidebar3 li.cur a {
   color: #02e4a2;
 }
-.nextmenu ul li {
+.nav-sidebar ul li {
   line-height: 41px;
   text-align: center;
   border-bottom: 1px solid #1d212c;
 }
-.nextmenu ul li.cur a {
+.nav-sidebar ul li.cur a {
   color: #02e4a2;
 }
-.nextmenu ul li.cur a:hover {
+.nav-sidebar ul li.cur a:hover {
   color: #02e4a2;
 }
-.nextmenu ul li a {
+.nav-sidebar ul li a {
   font-size: 12px;
   color: #a8aeb4;
   text-align: center;
   text-decoration: none;
   display: block;
 }
-.nextmenu ul li a:hover {
+.nav-sidebar ul li a:hover {
   color: #9ea4aa;
 }
-.nextmenu ul li a i.nextmenufa {
+.nav-sidebar ul li a i.nav-sidebarfa {
   position: absolute;
   line-height: 44px;
   right: 0;
@@ -337,6 +337,12 @@ table .table-hover tbody tr:hover {
   overflow: auto;
   top: 80px;
   z-index: 1;
+}
+.main > .page-header {
+  margin: 0 10px 20px;
+}
+.main > .page-header h4 {
+  color: #02e4a2;
 }
 .title-base {
   margin-bottom: 20px;
@@ -413,5 +419,25 @@ table .table-hover tbody tr:hover {
 }
 .ui-row {
   margin: 10px;
+  margin-bottom: 20px;
+}
+.ibox-title {
+  background-color: #ffffff;
+  border-color: #9eccd7;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 4px 0px 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+.ibox-content {
+  background-color: #ffffff;
+  color: inherit;
+  border-color: #b2b8be;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0px;
   margin-bottom: 20px;
 }
